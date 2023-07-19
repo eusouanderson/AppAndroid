@@ -30,7 +30,7 @@ Conexão com a internet para autenticação e atualização de horários dispon�
 1. Clone este repositório.
 
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/AppAndroid.git
 
 ```
 ---
