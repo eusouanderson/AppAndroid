@@ -33,3 +33,6 @@ Conexão com a internet para autenticação e atualização de horários dispon�
 git clone https://github.com/seu-usuario/seu-projeto.git
 
 ```
+---
+
+<img src="./img/screen.png" >
