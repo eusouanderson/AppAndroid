@@ -74,7 +74,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/send_button"
         style="@android:style/Widget.DeviceDefault.Light.Button"
         android:layout_width="157dp"
         android:layout_height="92dp"
