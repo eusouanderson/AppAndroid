@@ -6,90 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="182dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="50dp"
-        android:text="Quanto é ?"
-        android:textColor="#9C27B0"
-        android:textSize="24sp"
-        android:textStyle="bold"
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
-
-    <EditText
-        android:id="@+id/edit_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="R$ 99.27"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
-
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:checkedButton="@id/radio_usd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_field"
-        app:layout_constraintVertical_bias="0.100000024">
-
-        <RadioButton
-            android:id="@+id/radio_usd"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="USD" />
-
-        <RadioButton
-            android:id="@+id/radio_eur"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="EUR" />
-
-        <RadioButton
-            android:id="@+id/radio_clp"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:text="CLP" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="145dp"
-        android:layout_height="65dp"
-        android:backgroundTint="#4CAF50"
-        android:text="Converter"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
-
-    <TextView
-        android:id="@+id/txt_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="TextView"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/txt_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
