@@ -7,6 +7,10 @@
 
     <string name="txt_button">Logar</string>
 
+    <string name="hint_cadastro_button">Nome</string>
+
+    <string name="txt_button_cadastrar">Cadastrar</string>
+
     <string name="txt_register">Não tem conta? cadastre -se!</string>
 
 
