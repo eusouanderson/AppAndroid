@@ -22,7 +22,7 @@ Notificações: Lembretes de agendamentos são enviados para os clientes antes d
 
 ## Requisitos do Sistema
 
-Dispositivo ou emulador Android com versão 2022.2.1 Patch 2  ou superior.
+Dispositivo ou emulador Android com versão Lollipop 5.0 ou superior.
 Conexão com a internet para autenticação e atualização de horários disponíveis.
 
 ## Instalação
