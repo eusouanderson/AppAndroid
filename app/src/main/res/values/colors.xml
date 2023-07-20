@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="red">#DC1919</color>
-    <color name="blue">#FF007BFF</color>
-    <color name="green">#FF00D14D</color>
-    <color name="yellow">#FFFFD500</color>
-    <color name="orange">#FFFF6A00</color>
-    <color name="purple">#FF7F00FF</color>
-    <color name="pink">#FFFF1A75</color>
-    <color name="teal">#FF00BFBF</color>
-    <color name="gray">#6C6C6C</color>
-    <color name="brown">#4E4141</color>
+    <color name="black">#FF000000</color> -> <color name="rustic_black">#FF4C4C4C</color>
+    <color name="white">#FFFFFFFF</color> -> <color name="rustic_white">#FFE6E6E6</color>
+    <color name="red">#DC1919</color> -> <color name="rustic_red">#B34C4C</color>
+    <color name="blue">#FF007BFF</color> -> <color name="rustic_blue">#4C7DB3</color>
+    <color name="green">#FF00D14D</color> -> <color name="rustic_green">#6C8C6C</color>
+    <color name="yellow">#FFFFD500</color> -> <color name="rustic_yellow">#B3A64C</color>
+    <color name="orange">#FFFF6A00</color> -> <color name="rustic_orange">#B3864C</color>
+    <color name="purple">#FF7F00FF</color> -> <color name="rustic_purple">#7D4C7D</color>
+    <color name="pink">#FFFF1A75</color> -> <color name="rustic_pink">#B36C7D</color>
+    <color name="teal">#FF00BFBF</color> -> <color name="rustic_teal">#4C7D7D</color>
+    <color name="gray">#6C6C6C</color> -> <color name="rustic_gray">#4C4C4C</color>
+    <color name="brown">#4E4141</color> -> <color name="rustic_brown">#8C6C6C</color>
 </resources>
