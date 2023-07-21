@@ -13,6 +13,8 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import android.content.Intent
+import android.net.Uri
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,7 +59,26 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+    fun login (){
+
+    }
+    fun openWebsite(view: View) {
+        // URL do site
+        val websiteUrl = "https://github.com/eusouanderson"
+
+        // Cria um Intent com a ação ACTION_VIEW e a URI da página da web
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(websiteUrl))
+
+        // Verifica se existe um aplicativo que pode lidar com a ação (navegador)
+        if (intent.resolveActivity(packageManager) != null) {
+            // Se existir, inicia o Intent
+            startActivity(intent)
+        }
+    }
 }
+
+
+
 
 
 

@@ -41,79 +41,75 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/txt_input_email"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/container"
-        app:boxStrokeColor="@color/rustic_brown"
+        app:boxStrokeColor="@color/rustic_white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/white"
-        app:errorTextColor="@color/rustic_red"
-        app:errorEnabled="true"
-        style="@style/Widget.Material3.MaterialTimePicker.Display">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_editext"
+            android:drawableEnd="@drawable/baseline_email_24"
             android:hint="@string/hint_email"
-            android:textColor="@color/black"
+            android:imeOptions="actionNext"
             android:inputType="textWebEmailAddress"
             android:maxLines="1"
-            android:textSize="18sp"
             android:padding="15dp"
-            android:background="@drawable/background_editext"
-            android:drawableEnd="@drawable/baseline_email_24"
-            android:layout_margin="10dp"
-            tools:layout_editor_absoluteX="-16dp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:errorTextColor="@color/red"
+            android:textSize="18sp"
             app:errorEnabled="true"
-            android:imeOptions="actionNext"/>
+            app:errorTextColor="@color/red"
+            tools:layout_editor_absoluteX="-16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
 
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txt_input_password"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt_input_email"
-        app:boxStrokeColor="@color/rustic_brown"
-        app:passwordToggleEnabled="true"
+        app:boxStrokeColor="@color/rustic_white"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/white"
-        app:errorTextColor="@color/rustic_red"
-        app:errorEnabled="true"
-        style="@style/Widget.Material3.MaterialTimePicker.Display">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_email"
+        app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:textColor="@color/black"
-            android:inputType="numberPassword"
-            android:maxLines="1"
-            android:textSize="18sp"
-            android:padding="15dp"
-            android:background="@drawable/background_editext"
-            android:drawableEnd="@drawable/baseline_email_24"
-
-            android:layout_margin="10dp"
-            tools:layout_editor_absoluteX="-16dp"
-            android:textColorHint="@color/white"
-            app:errorTextColor="@color/red"
-            app:errorEnabled="true"
-            android:imeOptions="actionGo"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_editext"
+        android:drawableEnd="@drawable/baseline_email_24"
+        android:hint="@string/hint_password"
+        android:imeOptions="actionGo"
+        android:textColor="@color/rustic_white"
+        android:inputType="numberPassword"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="-16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <!---Final da area de Login e Senha -->
@@ -124,16 +120,19 @@
         android:id="@+id/btlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="90dp"
         android:padding="15dp"
-        android:text="@string/txt_button"
+        android:insetBottom="100dp"
+        android:textColor="@color/rustic_white"
+        android:background="@drawable/background_editext"
+        android:text="@string/txt_logar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_password"/>
 
-        app:layout_constraintTop_toBottomOf="@+id/txt_input_password" />
     <!---Final da area do Botão -->
 
     <!---Inicio da area de Texto Cadastro  @+id/txtTelaCadastro-->
@@ -141,17 +140,18 @@
         android:id="@+id/txtTelaCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_register"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/txt_register"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/btlogin"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btlogin" />
     <!---Final da area de Texto Cadastro -->
 
     <!---Inicio da area da Barra de Progresso @+id/progressBar-->
@@ -160,9 +160,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro" />
     <!---Final da area da Barra de Progresso -->
 
@@ -171,10 +171,12 @@
         android:id="@+id/btn_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:padding="15dp"
         android:text="@string/txt_button_cadastrar"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
+        android:textColor="@color/white"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <!---Inicio do Footer @+id/footer-->
@@ -194,130 +196,143 @@
 
     <!---Inicio da area de cadastro @+id/edit_email_CADASTRO @+id/txt_input_password_CADASTRO @+id/edit_nome_CADASTRO-->
 
-        <!--Nome para cadastro -->
+    <!--Nome para cadastro -->
     <com.google.android.material.textfield.TextInputLayout
-        android:visibility="gone"
         android:id="@+id/txt_input_nome_CADASTRO"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/container"
+        android:visibility="gone"
         app:boxStrokeColor="@color/rustic_brown"
-        app:passwordToggleEnabled="true"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/white"
-        app:errorTextColor="@color/rustic_red"
-        app:errorEnabled="true"
-        style="@style/Widget.Material3.MaterialTimePicker.Display">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_editext"
+            android:elevation="100dp"
             android:hint="@string/hint_nome_register"
-            android:textColor="@color/black"
+            android:imeOptions="actionNext"
             android:inputType="text"
             android:maxLines="1"
-            android:textSize="18sp"
             android:padding="15dp"
-            android:background="@drawable/background_editext"
-            android:layout_margin="10dp"
-            tools:layout_editor_absoluteX="-16dp"
+            android:textColor="@color/black"
             android:textColorHint="@color/white"
-            app:errorTextColor="@color/red"
+            android:textSize="18sp"
             app:errorEnabled="true"
-            android:imeOptions="actionNext"
-            android:elevation="100dp"/>
+            app:errorTextColor="@color/red"
+            tools:layout_editor_absoluteX="-16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Email para cadastro -->
+    <!--Email para cadastro -->
     <com.google.android.material.textfield.TextInputLayout
-        android:visibility="gone"
         android:id="@+id/txt_input_email_CADASTRO"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt_input_nome_CADASTRO"
+        android:visibility="gone"
         app:boxStrokeColor="@color/rustic_brown"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/white"
-        app:errorTextColor="@color/rustic_red"
-        app:errorEnabled="true"
-        style="@style/Widget.Material3.MaterialTimePicker.Display">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_nome_CADASTRO">
 
         <com.google.android.material.textfield.TextInputEditText
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_editext"
+            android:drawableEnd="@drawable/baseline_email_24"
+            android:elevation="10dp"
             android:hint="@string/hint_email_register"
-            android:textColor="@color/black"
+            android:imeOptions="actionNext"
             android:inputType="textWebEmailAddress"
             android:maxLines="1"
-            android:textSize="18sp"
             android:padding="15dp"
-            android:background="@drawable/background_editext"
-            android:drawableEnd="@drawable/baseline_email_24"
-            android:layout_margin="10dp"
-            app:layout_editor_absoluteX="-16dp"
+            android:textColor="@color/black"
             android:textColorHint="@color/white"
-            app:errorTextColor="@color/red"
+            android:textSize="18sp"
             app:errorEnabled="true"
-            android:elevation="10dp"
-            android:imeOptions="actionNext"/>
+            app:errorTextColor="@color/red"
+            app:layout_editor_absoluteX="-16dp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Senha para cadastro -->
+    <!--Senha para cadastro -->
     <com.google.android.material.textfield.TextInputLayout
-        android:visibility="gone"
         android:id="@+id/txt_input_password_CADASTRO"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt_input_email_CADASTRO"
+        android:visibility="gone"
         app:boxStrokeColor="@color/rustic_brown"
-        app:passwordToggleEnabled="true"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/white"
-        app:errorTextColor="@color/rustic_red"
-        app:errorEnabled="true"
-        style="@style/Widget.Material3.MaterialTimePicker.Display">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_email_CADASTRO"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_password_register"
-            android:textColor="@color/black"
-            android:inputType="numberPassword"
-            android:maxLines="1"
-            android:textSize="18sp"
-            android:padding="15dp"
+            android:layout_margin="10dp"
             android:background="@drawable/background_editext"
             android:drawableEnd="@drawable/baseline_email_24"
-            android:layout_margin="10dp"
-            tools:layout_editor_absoluteX="-16dp"
-            android:textColorHint="@color/white"
-            app:errorTextColor="@color/red"
-            app:errorEnabled="true"
             android:elevation="100dp"
-            android:imeOptions="actionGo"/>
+            android:hint="@string/hint_password_register"
+            android:imeOptions="actionGo"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textSize="18sp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            tools:layout_editor_absoluteX="-16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="openWebsite"
+        app:layout_constraintBottom_toBottomOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="@+id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar"
+        app:srcCompat="@drawable/github" />
+
     <!---Final do Footer-->
 
 

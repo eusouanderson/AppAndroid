@@ -12,4 +12,5 @@
     <color name="teal">#FF00BFBF</color> -> <color name="rustic_teal">#4C7D7D</color>
     <color name="gray">#6C6C6C</color> -> <color name="rustic_gray">#4C4C4C</color>
     <color name="brown">#A1C6BDBD</color> -> <color name="rustic_brown">#8C6C6C</color>
+    <color name="gray_transparent">#7C4C4C4C</color>
 </resources>
