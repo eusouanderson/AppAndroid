@@ -15,10 +15,14 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import android.content.Intent
 import android.net.Uri
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import androidx.core.os.persistableBundleOf
+
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var header: View
+    private var email: String = "dfg"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +64,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun login (){
+        if (email == "guhfuig"){
+
+            persistableBundleOf()
+        }
 
     }
     fun openWebsite(view: View) {
@@ -75,7 +83,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }
+
 
 
 
