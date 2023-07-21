@@ -12,6 +12,7 @@ import android.widget.ViewFlipper
 import androidx.appcompat.widget.AppCompatButton
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,22 +26,35 @@ class MainActivity : AppCompatActivity() {
         val logo = findViewById<ImageView>(R.id.logo)
         val email = findViewById<TextInputEditText>(R.id.edit_email)
         val password = findViewById<TextInputEditText>(R.id.edit_password)
-        //val email_cadastro = findViewById<TextInputEditText>(R.id.edit_email_CADASTRO)
-        val password_cadastro = findViewById<TextInputEditText>(R.id.edit_password_CADASTRO)
+        val email_cadastro = findViewById<TextInputLayout>(R.id.txt_input_email_CADASTRO)
+        val password_cadastro = findViewById<TextInputLayout>(R.id.txt_input_password_CADASTRO)
+        val nome_cadastro = findViewById<TextInputLayout>(R.id.txt_input_nome_CADASTRO)
         val botao_login = findViewById<AppCompatButton>(R.id.btlogin)
         val text_cadastro = findViewById<TextView>(R.id.txtTelaCadastro)
         val progress_bar = findViewById<ProgressBar>(R.id.progressBar)
         val botao_cadastro = findViewById<AppCompatButton>(R.id.btn_cadastrar)
         val footer = findViewById<View>(R.id.footer)
-        //val nome_cadastro = findViewById<TextInputEditText>(R.id.edit_nome_CADASTRO)
+
         val newvalor = 1800
 
         botao_cadastro.setOnClickListener {
-            //container.layoutParams.height = newvalor
-            //container.requestLayout()
-            //nome_cadastro.visibility = View.VISIBLE
-            //email_cadastro.bringToFront()
-            //password_cadastro.visibility = View.VISIBLE
+            footer.layoutParams.height = newvalor
+            footer.requestLayout()
+
+            botao_login.visibility = View.GONE
+            botao_cadastro.visibility = View.GONE
+
+            email.visibility = View.GONE
+            password.visibility = View.GONE
+
+
+            nome_cadastro.visibility = View.VISIBLE
+            nome_cadastro.bringToFront()
+            email_cadastro.visibility = View.VISIBLE
+            email_cadastro.bringToFront()
+            password_cadastro.visibility = View.VISIBLE
+            password_cadastro.bringToFront()
+
         }
     }
 }
