@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/container">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_email"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -96,7 +96,7 @@
         app:passwordToggleEnabled="true">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edit_password"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -213,7 +213,7 @@
         app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@id/container"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -228,7 +228,7 @@
             android:inputType="text"
             android:maxLines="1"
             android:padding="15dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="18sp"
             app:errorEnabled="true"
@@ -269,7 +269,7 @@
             android:inputType="textWebEmailAddress"
             android:maxLines="1"
             android:padding="15dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="18sp"
             app:errorEnabled="true"
@@ -305,19 +305,62 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/background_editext"
-            android:drawableEnd="@drawable/baseline_email_24"
             android:elevation="100dp"
             android:hint="@string/hint_password_register"
-            android:imeOptions="actionGo"
+            android:imeOptions="actionNext"
             android:inputType="numberPassword"
             android:maxLines="1"
             android:padding="15dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="18sp"
             app:errorEnabled="true"
             app:errorTextColor="@color/red"
-            tools:layout_editor_absoluteX="-16dp" />
+            tools:layout_editor_absoluteX="-16dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Confirmação de senha para cadastro -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_password_confirme_CADASTRO"
+        style="@style/Widget.Material3.MaterialTimePicker.Display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        app:boxStrokeColor="@color/rustic_brown"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/rustic_red"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_password_CADASTRO"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_editext"
+            android:drawableEnd="@drawable/baseline_email_24"
+            android:elevation="100dp"
+            android:hint="@string/hint_password_confirme"
+            android:imeOptions="actionGo"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            tools:layout_editor_absoluteX="-16dp"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
