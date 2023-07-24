@@ -29,4 +29,4 @@ Conexão com a internet para autenticação e atualização de horários dispon�
 
 ## Instalação
 
-Ainda não disponivel
+Ainda não disponivel.
