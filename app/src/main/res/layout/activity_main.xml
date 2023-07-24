@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -57,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/container">
 
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/edit_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -96,7 +97,7 @@
         app:passwordToggleEnabled="true">
 
     <com.google.android.material.textfield.TextInputEditText
-
+        android:id="@+id/edit_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -147,9 +148,7 @@
         android:text="@string/txt_register"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btlogin" />
     <!---Final da area de Texto Cadastro -->
@@ -166,9 +165,9 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro" />
     <!---Final da area da Barra de Progresso -->
 
-    <!---Botão Cadastrar @+id/btn_cadastrar-->
+    <!---Botão Ir Cadastrar @+id/btn_ir_cadastrar-->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_cadastrar"
+        android:id="@+id/btn_ir_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
@@ -177,7 +176,7 @@
         android:text="@string/txt_button_cadastrar"
         android:textColor="@color/white"
         android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTelaCadastro" />
 
     <!---Inicio do Footer @+id/footer-->
     <View
@@ -217,7 +216,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/edit_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -257,7 +256,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_input_nome_CADASTRO">
 
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/edit_email_cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -300,7 +299,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/edit_password_cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -342,7 +341,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-
+            android:id="@+id/edit_password_confirme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -364,6 +363,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!---Botão Cadastrar @+id/btn_ir_cadastrar-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:padding="15dp"
+        android:text="@string/txt_button_cadastrar"
+        android:textColor="@color/white"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_password_confirme_CADASTRO" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="48dp"
@@ -373,7 +386,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="@+id/footer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_cadastrar"
         app:srcCompat="@drawable/github" />
 
     <!---Final do Footer-->
