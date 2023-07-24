@@ -18,6 +18,10 @@ ___
 
 ___
 Tela de Cadastro: Novos clientes podem se cadastrar fornecendo informações básicas.
+___
+<img src="./img/screen3.png" width=250 >
+
+___
 Tela Principal: Exibe os serviços oferecidos pela barbearia e informações sobre o estabelecimento.
 ___
 <img src="./img/screen2.png" >

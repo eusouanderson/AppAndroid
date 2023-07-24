@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.textfield.TextInputLayout
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.widget.EditText
 import android.widget.Toast
@@ -48,7 +49,12 @@ class MainActivity : AppCompatActivity() {
         botao_ir_cadastro.setOnClickListener {
             hideViews()
             showViews()
+            // Modificar a altura do footer (exemplo: 200dp)
             footer.layoutParams.height = newValue
+
+            // Mudar o background do footer (exemplo: cor sólida)
+            footer.setBackgroundResource(R.drawable.back)
+
             footer.requestLayout()
         }
 
