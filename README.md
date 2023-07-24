@@ -40,7 +40,7 @@ Conexão com a internet para autenticação e atualização de horários dispon�
 ## Instalação
 
 Download do app (Versão de teste)
-<a href="/download-apk/app-Barber-TESTE.apk" download>Clique aqui </a>
+<a href="/apk/app-Barber-TESTE.apk" download>Clique aqui </a>
 
 Os dispositivos Android geralmente impedem a instalação de apps de desenvolvedores desconhecidos — isto é, que não sejam da Google Play Store. É possível mudar isso, claro, ativando a opção fontes desconhecidas nas configurações do smartphone. No entanto, o processo ficou um pouco mais complicado a partir do Android Oreo 8.0.
 

@@ -44,7 +44,7 @@ replay_pid*
 # Covers files to be ignored for android development using Android Studio.
 
 # Built application files
-*.apk
+
 *.ap_
 *.aab
 
@@ -149,6 +149,8 @@ obj/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
+.idea
+
 
 # JIRA plugin
 atlassian-ide-plugin.xml
