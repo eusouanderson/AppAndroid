@@ -8,7 +8,7 @@ Este é o repositório do aplicativo da Barbearia, desenvolvido no Android Studi
 
 - Kotlin
 - Android Studio 
-
+- Flask - servidor
 
 ## Funcionalidades
 
