@@ -13,10 +13,16 @@ Este é o repositório do aplicativo da Barbearia, desenvolvido no Android Studi
 ## Funcionalidades
 
 Tela de Login: Os usuários podem fazer login com suas credenciais ou criar uma nova conta.
+___
 <img src="./img/screen.png" >
+
+___
 Tela de Cadastro: Novos clientes podem se cadastrar fornecendo informações básicas.
 Tela Principal: Exibe os serviços oferecidos pela barbearia e informações sobre o estabelecimento.
+___
 <img src="./img/screen2.png" >
+
+___
 Tela de Agendamento: Permite que os clientes selecionem um serviço e escolham uma data e hora disponíveis para agendamento.
 Tela de Confirmação: Confirma os detalhes do agendamento antes de ser finalizado.
 Tela de Histórico: Mostra o histórico de agendamentos anteriores do cliente.
