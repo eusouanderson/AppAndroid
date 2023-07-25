@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.google.android.material.textfield.TextInputLayout
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.widget.EditText
 import android.widget.Toast
+import java.net.URL
+import javax.net.ssl.HttpsURLConnection
 
 class MainActivity : AppCompatActivity() {
     private var viewsToHide: List<View> = listOf()
@@ -53,13 +54,14 @@ class MainActivity : AppCompatActivity() {
             footer.layoutParams.height = newValue
 
             // Mudar o background do footer (exemplo: cor sólida)
-            footer.setBackgroundResource(R.drawable.back)
+            footer.setBackgroundResource(R.color.blue)
 
             footer.requestLayout()
         }
 
         botao_cadastrar.setOnClickListener{
             register()
+
         }
     }
     private fun hideViews() {
@@ -78,7 +80,17 @@ class MainActivity : AppCompatActivity() {
         val confirme_password = findViewById<EditText>(R.id.edit_password_confirme)
         val value_password = password_cadastro.text.toString()
         val conf_password = confirme_password.text.toString()
+        Thread {
+            val url = URL("https://server-eqbe.onrender.com/api/usuarios")
+            val conn = url.openConnection() as HttpsURLConnection
 
+            try {
+                val data = conn.inputStream.bufferedReader().readText()
+
+            } finally {
+                conn.disconnect()
+            }
+        }.start()
 
         if (value_password == conf_password) {
             val mainActivity = Intent(this, MainActivity::class.java)
@@ -87,6 +99,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Senhas não coincidem!", Toast.LENGTH_LONG).show()
         }
     }
+
+
     fun openWebsite(view: View) {
         // URL do site
         val websiteUrl = "https://github.com/eusouanderson"
