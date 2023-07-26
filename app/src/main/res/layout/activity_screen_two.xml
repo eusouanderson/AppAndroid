@@ -26,6 +26,21 @@
         app:layout_constraintTop_toTopOf="@id/container"
         app:srcCompat="@drawable/logo" />
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="248dp"
+        android:layout_height="27dp"
+        android:background="@color/black"
+        android:text=" "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="MissingConstraints" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -99,6 +114,7 @@
         app:layout_constraintVertical_bias="0.122"
         tools:ignore="MissingConstraints"
         />
+
 
     <Button
         android:id="@+id/button"
