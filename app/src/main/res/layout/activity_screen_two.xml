@@ -26,26 +26,11 @@
         app:layout_constraintTop_toTopOf="@id/container"
         app:srcCompat="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="248dp"
-        android:layout_height="27dp"
-        android:background="@color/black"
-        android:text=" "
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
-        tools:ignore="MissingConstraints" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="@color/gray_transparent"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
@@ -62,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
 
-            android:textColor="@android:color/white"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -71,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Endereço: Rua das Flores, 123"
-            android:textColor="@android:color/white"
+            android:textColor="@color/rustic_yellow"
             android:textSize="16sp" />
 
         <TextView
@@ -82,22 +67,6 @@
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Serviços oferecidos:"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvServicos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Corte de cabelo, Barba, Design de sobrancelhas"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView

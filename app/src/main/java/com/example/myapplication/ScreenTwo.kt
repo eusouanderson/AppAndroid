@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,46 +12,24 @@ import java.net.URL
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 class ScreenTwo : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen_two)
         val text = findViewById<TextView>(R.id.textView)
         val button = findViewById<Button>(R.id.button)
+        // Recebe o valor do nome do usuário da intent
+        val nomeUsuario = intent.getStringExtra("nome_usuario")
 
-        button.setOnClickListener {
-            Thread {
-                val url = URL("https://server-eqbe.onrender.com/api/usuarios")
-                val conn = url.openConnection() as HttpsURLConnection
-                val nome_cadastro = findViewById<TextInputLayout>(R.id.txt_input_nome_CADASTRO)
+        text.text = "Olá, $nomeUsuario!"
 
-
-                try {
-                    val data = conn.inputStream.bufferedReader().readText()
-
-                    val gson = Gson()
-                    val usersList = gson.fromJson(data, Array<User>::class.java)
-
-                    for (user in usersList) {
-                        val name = user.name
-                        val email = user.email
-                        val password = user.password
-
-                        runOnUiThread {
-                            text.text = "Ola $name, $email, $password, $nome_cadastro"
-                        }
-                    }
-
-                } finally {
-                    conn.disconnect()
-                }
-            }.start()
-        }
     }
 }
 
-data class User(val name: String, val email: String, val password: String)
+
 
 
 

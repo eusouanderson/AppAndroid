@@ -31,13 +31,15 @@ class MainActivity : AppCompatActivity() {
     private var viewsToSee: List<View> = listOf()
     private val usersMap = HashMap<String, String>()
     private lateinit var progressBar: ProgressBar
-
-
+    private val url = "https://server-2ht4.onrender.com/api/usuarios"
+    object UserManager {
+        var loggedInUserEmail: String? = null
+    }
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fetchUsersData()
+        fetchUsersData(url)
         startRegister()
         findViewById<View>(R.id.container)
         findViewById<ImageView>(R.id.logo)
@@ -57,9 +59,6 @@ class MainActivity : AppCompatActivity() {
         val git = findViewById<ImageView>(R.id.imageView2)
         val newValue = 1800
 
-        //Screen Two
-        val name = findViewById<TextView>(R.id.name)
-
 
         viewsToHide = listOf(email, password, botao_ir_cadastro, botao_login, text_cadastro, git)
         viewsToSee = listOf(
@@ -78,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         botao_ir_cadastro.setOnClickListener {
             hideViews()
             showViews()
-            // Modificar a altura do footer (exemplo: 200dp)
+            // Modificar a altura do footer
             footer.layoutParams.height = newValue
 
             // Mudar o background do footer (exemplo: cor sólida)
@@ -100,13 +99,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun fetchUsersData() {
-        val url = "https://server-eqbe.onrender.com/api/usuarios"
+    private fun fetchUsersData(url: String) {
+
 
         val request = JsonArrayRequest(
             Request.Method.GET, url, null,
             { response ->
                 try {
+                    var foundUser = false
+                    var nomeUsuario = ""
+
                     for (i in 0 until response.length()) {
                         val jsonObject = response.getJSONObject(i)
                         val email = jsonObject.getString("email")
@@ -114,8 +116,22 @@ class MainActivity : AppCompatActivity() {
                         val name = jsonObject.getString("name")
 
                         usersMap[email] = password
+
+                        if (email == UserManager.loggedInUserEmail) {
+                            foundUser = true
+                            nomeUsuario = name
+                            break
+                        }
                     }
 
+                    if (foundUser) {
+                        val intent = Intent(this, ScreenTwo::class.java)
+                        intent.putExtra("nome_usuario", nomeUsuario)
+                        startActivity(intent)
+                    } else {
+                        // Se o email não for encontrado, permanece na tela de login
+                        // Implemente aqui o código para mostrar a tela de login ou uma mensagem de erro
+                    }
 
                     setupLoginButton()
                 } catch (e: JSONException) {
@@ -137,6 +153,9 @@ class MainActivity : AppCompatActivity() {
         buttonLogin.setOnClickListener {
             val email = findViewById<TextInputLayout>(R.id.txt_input_email).editText?.text.toString()
             val password = findViewById<TextInputLayout>(R.id.txt_input_password).editText?.text.toString()
+            val emailDoUsuarioLogado = email
+            UserManager.loggedInUserEmail = emailDoUsuarioLogado
+
 
             if (isValidCredentials(email, password)) {
                 progressBar.visibility = View.GONE
@@ -144,8 +163,10 @@ class MainActivity : AppCompatActivity() {
                 val screenTwo = Intent(this, ScreenTwo::class.java)
                 startActivity(screenTwo)
             } else {
-                Toast.makeText(this, "Credenciais inválidas", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Login inválido", Toast.LENGTH_LONG).show()
             }
+
+
         }
     }
 
@@ -218,7 +239,7 @@ class MainActivity : AppCompatActivity() {
     private fun sendJsonData(jsonObject: JSONObject) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val url = URL("https://server-eqbe.onrender.com/api/usuarios/adicionar")
+                val url = URL("https://server-2ht4.onrender.com/api/usuarios/adicionar")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.requestMethod = "POST"
                 connection.setRequestProperty("Content-Type", "application/json")
